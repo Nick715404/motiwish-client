@@ -1,0 +1,13 @@
+.header {
+  padding-top: 96px;
+
+  &__wrapper {
+    display: flex;
+  }
+  &__app_content {
+    display: flex;
+  }
+  &__vk_content {
+    display: flex;
+  }
+}
