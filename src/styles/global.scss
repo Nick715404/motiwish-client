@@ -1,3 +1,14 @@
+// Fonts
+@font-face {
+	font-family: SIFU;
+	src: url(./../../public/fonts/sf-ui-display-medium-58646be638f96.woff);
+	font-weight: 400;
+}
+
+// Colors
+$darkPurple: #1F1B2C;
+$white: #000;
+
 // Default styles
 *,
 *::before,
@@ -34,8 +45,23 @@ ol {
 	list-style: none;
 }
 
+body,
+html {
+	min-height: 100vh
+}
+
 body {
 	overflow: hidden;
+	font-family: SIFU;
+	color: $white;
+}
+
+.body-main {
+	background-color: $darkPurple;
+}
+
+#root {
+	min-height: 100vh;
 }
 
 .container {

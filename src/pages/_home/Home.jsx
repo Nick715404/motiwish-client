@@ -1,6 +1,6 @@
 
-
-import Header from "../../components/_header/Header";
+import Header from "./../../components/_header/Header";
+import Footer from './../../components/_footer/Footer';
 
 export default function Home() {
   return (
@@ -9,7 +9,9 @@ export default function Home() {
         <Header />
       </div>
       <div className="">main part</div>
-      <div className="">footer menu</div>
+      <div className="">
+        <Footer />
+      </div>
     </div>
   )
 }

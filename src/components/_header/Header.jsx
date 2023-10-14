@@ -2,6 +2,7 @@
 import styles from './Header.module.scss';
 
 import BurgerMenu from '../_burgerMenu/BurgerMenu';
+import Coins from './../_coins/Coins';
 
 export default function Header() {
   return (
@@ -13,15 +14,7 @@ export default function Header() {
               <BurgerMenu />
             </div>
             <div className="">
-              coins
-            </div>
-          </div>
-          <div className={styles.header__vk_content}>
-            <div className="">
-              menu
-            </div>
-            <div className="">
-              cross
+              <Coins count={15} />
             </div>
           </div>
         </div>
