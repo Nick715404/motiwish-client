@@ -1,0 +1,22 @@
+.addTaskBtn {
+  color: #ED903A;
+  font-size: 14px;
+  border: none;
+  background: none;
+  padding-left: 25px;
+  outline: none;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url(../../assets/svg/cross.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}

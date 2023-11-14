@@ -1,0 +1,18 @@
+.home-task {
+
+  &__modal {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    color: #ED903A;
+    height: 236px;
+    border-radius: 14px 14px 0 0;
+    padding: 5%;
+    font-size: 14px;
+  }
+
+  &__tasks {
+    padding-top: 4%;
+  }
+}

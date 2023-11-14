@@ -7,7 +7,7 @@
 
 // Colors
 $darkPurple: #1F1B2C;
-$white: #000;
+$white: #fff;
 
 // Default styles
 *,
@@ -50,22 +50,80 @@ html {
 	min-height: 100vh
 }
 
-body {
-	overflow: hidden;
-	font-family: SIFU;
-	color: $white;
-}
-
 .body-main {
-	background-color: $darkPurple;
+	overflow: hidden;
 }
 
 #root {
 	min-height: 100vh;
+	position: relative;
+	color: #fff;
+	background: #1F1B2C;
+
+	&::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../../public/img/stars.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 205px;
+		z-index: -1;
+  }
 }
 
 .container {
-	padding: 0 10px;
-	max-width: 100%;
+	width: 90%;
+	max-width: 1600px;
 	margin: 0 auto;
+}
+
+#id {
+	background-color: #fff;
+}
+
+.app {
+	position: relative;
+	overflow: hidden;
+	font-family: SIFU;
+	color: $white;
+	background-color: $darkPurple;
+	min-height: 100vh;
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		display: block;
+		background-image: url(./../../public/img/stars.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		height: 203px;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+
+.vkuiAppRoot {
+	height: 100vh !important;
+}
+
+.vkuiInternalPanel__in {
+	padding: 0 !important;
+}
+
+.vkuiPanelHeader__in {
+	background: transparent !important;
+}
+
+.vkuiPanel .vkuiPanel__in, .vkuiPanel:before {
+	background: transparent !important;
+}
+
+.vkuiPanelHeader__content {
+	padding: 0 !important;
 }

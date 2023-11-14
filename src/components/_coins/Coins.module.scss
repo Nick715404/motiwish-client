@@ -10,7 +10,7 @@ $black: #000;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
   &__icon {
     background-image: url('../../../public/img/header/монетки.svg');
@@ -19,5 +19,9 @@ $black: #000;
     background-size: cover;
     width: 24px;
     height: 22px;
+  }
+
+  &__value {
+    font-size: 14px;
   }
 }

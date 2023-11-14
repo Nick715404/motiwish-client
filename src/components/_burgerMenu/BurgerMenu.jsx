@@ -8,8 +8,12 @@ export default function BurgerMenu() {
       <div className={styles.menu__burger_box}>
         <div className={styles.menu__burger_icon}></div>
       </div>
-      <div className="">
-        awdaw
+      <div className={styles.menu__wrapper}>
+        <ul>
+          <li>
+            
+          </li>
+        </ul>
       </div>
     </div>
   )

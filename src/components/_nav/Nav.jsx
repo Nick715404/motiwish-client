@@ -15,21 +15,21 @@ export default function Nav() {
         </li>
         <li className='list__item'>
           <div className="list__icon list__icon--calendar"></div>
-          <span className='list__title'>Главная</span>
+          <span className='list__title'>Календарь</span>
           <NavLink className={({ isActive }) => {
             return ('list__link' + (isActive ? ' active' : ' normal'))
           }} to={'/calendar'}></NavLink>
         </li>
         <li className='list__item'>
           <div className="list__icon list__icon--statistics"></div>
-          <span className='list__title'>Главная</span>
+          <span className='list__title'>Статистика</span>
           <NavLink className={({ isActive }) => {
             return ('list__link' + (isActive ? ' active' : ' normal'))
           }} to={'/statistic'}></NavLink>
         </li>
         <li className='list__item'>
           <div className="list__icon list__icon--challenges"></div>
-          <span className='list__title'>Главная</span>
+          <span className='list__title'>Челленджи</span>
           <NavLink className={({ isActive }) => {
             return ('list__link' + (isActive ? ' active' : ' normal'))
           }} to={'/challenges'}></NavLink>

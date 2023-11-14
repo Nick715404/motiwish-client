@@ -1,0 +1,40 @@
+.header {
+
+  max-height: 130px;
+  margin-top: 3%;
+
+  @media (max-width: 768px) {
+    margin-top: 12%;
+    margin-bottom: 25%;
+  }
+
+  .vkuiSeparator {
+    display: none;
+  }
+
+  .vkuiPanelHeader__content-in {
+    display: flex;
+    align-items: center;
+  }
+
+  .vkuiInternalPanel__in {
+    padding: 0;
+  }
+
+  .vkuiInternalPanelHeader__fixed {
+    position: static;
+  }
+
+  .vkuiPanelHeader--vis.vkuiPanelHeader--fixed::before {
+    content: none !important;
+  }
+
+  .vkuiSpacing {
+    display: none;
+  }
+
+  .vkuiPanelHeader__content-in {
+    max-width: 140px;
+    justify-content: space-between;
+  }
+}

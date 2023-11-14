@@ -1,24 +1,32 @@
-import React from 'react';
 import './styles/global.scss';
+import '@vkontakte/vkui/dist/vkui.css';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { View, Epic } from '@vkontakte/vkui';
+import { useActiveVkuiLocation, useGetPanelForView } from '@vkontakte/vk-mini-apps-router';
 
-import Home from './pages/_home/Home';
-import Calendar from './pages/_calendar/Calendar';
-import Statistics from './pages/_statistics/Statistics';
-import Challenges from './pages/_challenges/Challenges';
+import MyTabbar from './components/_tabbar/Tabbar';
+
+
+import Home from './panels/_home/Home';
+import Calendar from './panels/_calendar/CalendarPage';
+import Statistics from './panels/_statistics/Statistics';
+import Challenges from './panels/_challenges/Challenges';
 
 const App = () => {
+	const { view: activeView } = useActiveVkuiLocation();
+	const activePanel = useGetPanelForView('homePanel');
+
 	return (
-		<BrowserRouter>
-			<Routes>
-				<Route path='/' element={<Home />} />
-				<Route path='/calendar' element={<Calendar />} />
-				<Route path='/statistics' element={<Statistics />} />
-				<Route path='/challenges' element={<Challenges />} />
-				<Route path='*' element={<Home />} />
-			</Routes>
-		</BrowserRouter>
+		<Epic
+			activeStory={activeView}
+			tabbar={<MyTabbar />}>
+			<View id={activeView} activePanel={activePanel}>
+				<Home nav='homePanel' />
+				<Calendar nav='calendarPanel' />
+				<Statistics nav='statisticsPanel' />
+				<Challenges nav='challengesPanel' />
+			</View>
+		</Epic>
 	);
 }
 
