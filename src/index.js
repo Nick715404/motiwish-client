@@ -1,4 +1,4 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import bridge from "@vkontakte/vk-bridge";
 import App from "./App";
@@ -37,7 +37,9 @@ ReactDOM.render(
     <AdaptivityProvider>
       <AppRoot mode="embedded">
         <RouterProvider router={router}>
-          <App />
+          <StrictMode>
+            <App />
+          </StrictMode>
         </RouterProvider>
       </AppRoot>
     </AdaptivityProvider>

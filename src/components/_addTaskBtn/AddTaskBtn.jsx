@@ -1,7 +1,7 @@
 import './AddTaskBtn.scss';
 
-export default function AddTaskBtn({ text }) {
+export default function AddTaskBtn({ text, handleClick }) {
   return (
-    <button className='addTaskBtn'>{text}</button>
+    <button onClick={handleClick} className='addTaskBtn'>{text}</button>
   )
 }

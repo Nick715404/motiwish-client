@@ -5,6 +5,12 @@
 	font-weight: 400;
 }
 
+@font-face {
+	font-family: SIFU;
+	src: url(./../../public/fonts/sfuidisplay_bold.woff);
+	font-weight: 700;
+}
+
 // Colors
 $darkPurple: #1F1B2C;
 $white: #fff;
@@ -59,20 +65,22 @@ html {
 	position: relative;
 	color: #fff;
 	background: #1F1B2C;
+	font-family: SIFU, sans-serif;
+	overflow: hidden;
 
 	&::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url(../../public/img/stars.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 205px;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: url(../../public/img/stars.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		height: 205px;
 		z-index: -1;
-  }
+	}
 }
 
 .container {
@@ -92,6 +100,7 @@ html {
 	color: $white;
 	background-color: $darkPurple;
 	min-height: 100vh;
+
 	&::after {
 		content: '';
 		position: absolute;
@@ -118,12 +127,36 @@ html {
 
 .vkuiPanelHeader__in {
 	background: transparent !important;
+	position: static !important;
 }
 
-.vkuiPanel .vkuiPanel__in, .vkuiPanel:before {
+.vkuiPanel .vkuiPanel__in,
+.vkuiPanel:before {
 	background: transparent !important;
 }
 
 .vkuiPanelHeader__content {
 	padding: 0 !important;
+}
+
+.close_btn {
+	position: absolute;
+	top: 45px;
+	left: 25px;
+	width: 25px;
+	height: 25px;
+	background-image: url(../assets/svg/Крестик.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	z-index: 99999;
+}
+
+.burger-active {
+	transform: translate(0%) !important;
+	border-radius: unset !important;
+}
+
+.vkuiPanel:before {
+	content: none;
 }

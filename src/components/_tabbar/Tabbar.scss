@@ -28,11 +28,23 @@
     background-size: 105%;
   }
 
+  .challenges-icon,
+  .statisctic-icon {
+    opacity: 0.5;
+  }
+
+  .clicked-item {
+    opacity: 1;
+  }
+
   .active {
     opacity: 1;
   }
 
-  .disable {
-    opacity: 0.5;
+  .vkuiTabbarItem__icon {
+    svg {
+      width: 36px !important;
+      height: 36px !important;
+    }
   }
 }

@@ -1,29 +1,56 @@
+import React, { useState } from 'react';
+import { Tabbar, TabbarItem } from "@vkontakte/vkui";
+import { Icon36HomeOutline, Icon36CalendarOutline, Icon36LiveOutline, Icon28StatisticCircleFillBlue } from '@vkontakte/icons';
+import { useRouteNavigator } from '@vkontakte/vk-mini-apps-router';
+import { useActiveVkuiLocation } from '@vkontakte/vk-mini-apps-router';
+import { Icon28StatisticsOutline } from '@vkontakte/icons';
+
 import './Tabbar.scss';
 
-import { Tabbar, TabbarItem } from "@vkontakte/vkui";
-import { Icon36HomeOutline } from '@vkontakte/icons';
-import { Icon36CalendarOutline } from '@vkontakte/icons';
-
-import { useRouteNavigator } from '@vkontakte/vk-mini-apps-router';
-// поменять иконки
 export default function MyTabbar() {
-
   const navigator = useRouteNavigator();
+  const { panel: activePanel } = useActiveVkuiLocation();
+
+  const [activeTab, setActiveTab] = useState(null);
+
+  const handleItemClick = (itemName) => {
+    navigator.push(`/${itemName}`);
+    setActiveTab(itemName);
+  };
+
+  const getTabClass = (tabName) => {
+    return activePanel === `${tabName}Panel` ? 'clicked-item' : '';
+  };
 
   return (
     <Tabbar>
-      <TabbarItem onClick={() => navigator.push('/')} className='disable' text='Домой'>
-        <Icon36HomeOutline  />
+      <TabbarItem
+        selected={activePanel === 'homePanel'}
+        onClick={() => handleItemClick('')}
+        text='Домой'>
+        <Icon36HomeOutline />
       </TabbarItem>
-      <TabbarItem onClick={() => navigator.push('/calendar')} className='disable' text='Календарь'>
+      <TabbarItem
+        selected={activePanel === 'calendarPanel'}
+        onClick={() => handleItemClick('calendar')}
+        text='Календарь'>
         <Icon36CalendarOutline />
       </TabbarItem>
-      <TabbarItem onClick={() => navigator.push('/statistics')} className='disable' text='Статистика'>
-        <div className="statisctic-icon"></div>
+      <TabbarItem
+        selected={activePanel === 'statisticsPanel'}
+        onClick={() => handleItemClick('statistics')}
+        text='Статистика'>
+        {/* <div className={`statisctic-icon ${getTabClass('statistics')}`}></div> */}
+        <Icon28StatisticsOutline />
       </TabbarItem>
-      <TabbarItem onClick={() => navigator.push('/challenges')} className='disable' text='Челленджи'>
-        <div className="challenges-icon"></div>
+      <TabbarItem
+        selected={activePanel === 'challengesPanel'}
+        onClick={() => handleItemClick('challenges')}
+        text='Челленджи'>
+        {/* <div className={`challenges-icon ${getTabClass('challenges')}`}></div>
+         */}
+         <Icon36LiveOutline />
       </TabbarItem>
     </Tabbar>
-  )
+  );
 }

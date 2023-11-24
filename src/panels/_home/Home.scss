@@ -1,0 +1,12 @@
+#homePanel {
+  .vkuiView,
+  .vkuiView__panel,
+  .vkuiPanel,
+  .vkuiInternalPanel__in {
+    position: static;
+  }
+
+  .vkuiPanel:before {
+    content: none;
+  }
+}

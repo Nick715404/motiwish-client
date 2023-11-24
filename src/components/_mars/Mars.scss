@@ -1,12 +1,26 @@
 .mars {
   position: absolute;
-  top: -8px;
+  // top: -8px;
+  bottom: 0;
   left: 0;
   height: 650px;
   width: 100%;
-  background-image: url(../../../public/img/марс.png);
+  background-image: url(./../../assets/img/mars-desk.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   z-index: -1;
+
+  @media (max-width: 630px) {
+    max-height: 725px;
+  }
+
+  @media (max-width: 470px) {
+    background-image: url(../../../public/img/марс.png);
+    height: 650px;
+  }
+
+  @media (max-width: 310px) {
+    background-size: 99%;
+  }
 }
