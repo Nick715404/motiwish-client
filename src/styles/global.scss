@@ -160,3 +160,25 @@ html {
 .vkuiPanel:before {
 	content: none;
 }
+Í
+.delete-task-btn,
+.submit-task-btn {
+	height: 30px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.submit-task-btn {
+	background-color: #ED903A;
+	border: 1px solid #ED903A;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.delete-task-btn {
+	background-color: transparent;
+	border: 1px solid transparent;
+	color: #ED903A;
+}

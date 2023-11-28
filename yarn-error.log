@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.19/libexec/bin/yarn.js add Премиальный внедорожник Mercedes Gelandewagen всегда в центре внимания на дороге. Он смотрится солидно и презентабельно, обеспечивает комфорт и безопасность в любых дорожных и погодных условиях. Заказать прокат М
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.19/libexec/bin/yarn.js add react-hook-fomr
 
 PATH: 
   /usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
@@ -14,15 +14,17 @@ Platform:
   darwin x64
 
 Trace: 
-  TypeError [ERR_UNESCAPED_CHARACTERS]: https://registry.npmjs.org/Премиальный: Request path contains unescaped characters
-      at new NodeError (node:internal/errors:405:5)
-      at new ClientRequest (node:_http_client:183:13)
-      at Object.request (node:https:358:10)
-      at module.exports.Request.start (/usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:141452:32)
-      at module.exports.Request.end (/usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:142211:10)
-      at end (/usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:141265:14)
-      at Immediate.<anonymous> (/usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:141279:7)
-      at process.processImmediate (node:internal/timers:476:21)
+  Error: https://registry.npmjs.org/react-hook-fomr: Not found
+      at params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:66145:18)
+      at self.callback (/usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:140890:22)
+      at Request.emit (node:events:517:28)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:141862:10)
+      at Request.emit (node:events:517:28)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:631:28)
+      at IncomingMessage.emit (node:events:529:35)
+      at endReadableNT (node:internal/streams/readable:1368:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 
 npm manifest: 
   {
@@ -43,6 +45,7 @@ npm manifest:
       "dependencies": {
           "@vkontakte/icons": "2.7.0",
           "@vkontakte/vk-bridge": "^2.11.2",
+          "@vkontakte/vk-mini-apps-router": "^1.1.1",
           "@vkontakte/vk-miniapps-deploy": "^0.0.25",
           "@vkontakte/vkui": "^5.9.2",
           "babel-eslint": "^10.1.0",
@@ -56,7 +59,8 @@ npm manifest:
           "react-big-calendar": "^1.8.4",
           "react-datepicker": "^4.20.0",
           "react-dom": "^17.0.2",
-          "react-router-dom": "^6.16.0"
+          "react-router-dom": "^6.16.0",
+          "react-spring-bottom-sheet": "^3.4.1"
       },
       "devDependencies": {
           "cross-env": "^7.0.3",
@@ -1249,6 +1253,13 @@ Lockfile:
     dependencies:
       regenerator-runtime "^0.14.0"
   
+  "@babel/runtime@^7.3.1":
+    version "7.23.4"
+    resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.4.tgz#36fa1d2b36db873d25ec631dcc4923fdc1cf2e2e"
+    integrity sha512-2Yv65nlWnWlSpe3fXEyX5i7fx5kIKo4Qbcj+hMO0odwaneFjfXw5fdum+4yL20O0QiaHpia0cYQ9xpNMqrBwHg==
+    dependencies:
+      regenerator-runtime "^0.14.0"
+  
   "@babel/template@^7.18.10", "@babel/template@^7.3.3":
     version "7.18.10"
     resolved "https://registry.npmjs.org/@babel/template/-/template-7.18.10.tgz"
@@ -1778,6 +1789,11 @@ Lockfile:
       "@jridgewell/resolve-uri" "^3.1.0"
       "@jridgewell/sourcemap-codec" "^1.4.14"
   
+  "@juggle/resize-observer@^3.2.0":
+    version "3.4.0"
+    resolved "https://registry.yarnpkg.com/@juggle/resize-observer/-/resize-observer-3.4.0.tgz#08d6c5e20cf7e4cc02fd181c4b0c225cd31dbb60"
+    integrity sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==
+  
   "@leichtgewicht/ip-codec@^2.0.1":
     version "2.0.4"
     resolved "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"
@@ -1840,10 +1856,32 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
     integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
   
+  "@reach/portal@^0.13.0":
+    version "0.13.2"
+    resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.13.2.tgz#6f2a6f4afc14894bde9c6435667bb9b660887ed9"
+    integrity sha512-g74BnCdtuTGthzzHn2cWW+bcyIYb0iIE/yRsm89i8oNzNgpopbkh9UY8TPbhNlys52h7U60s4kpRTmcq+JqsTA==
+    dependencies:
+      "@reach/utils" "0.13.2"
+      tslib "^2.1.0"
+  
+  "@reach/utils@0.13.2":
+    version "0.13.2"
+    resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.13.2.tgz#87e8fef8ebfe583fa48250238a1a3ed03189fcc8"
+    integrity sha512-3ir6cN60zvUrwjOJu7C6jec/samqAeyAB12ZADK+qjnmQPdzSYldrFWwDVV5H0WkhbYXR3uh+eImu13hCetNPQ==
+    dependencies:
+      "@types/warning" "^3.0.0"
+      tslib "^2.1.0"
+      warning "^4.0.3"
+  
   "@remix-run/router@1.9.0":
     version "1.9.0"
     resolved "https://registry.npmjs.org/@remix-run/router/-/router-1.9.0.tgz"
     integrity sha512-bV63itrKBC0zdT27qYm6SDZHlkXwFL1xMBuhkn+X7l0+IIhNaH5wuuvZKp6eKhCD4KFhujhfhCT1YxXW6esUIA==
+  
+  "@remix-run/router@^1.7.1":
+    version "1.10.0"
+    resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.10.0.tgz#e2170dc2049b06e65bbe883adad0e8ddf8291278"
+    integrity sha512-Lm+fYpMfZoEucJ7cMxgt4dYt8jLfbpwRCzAjm9UgSLOkmlqo9gupxt6YX3DY0Fk155NT9l17d/ydi+964uS9Lw==
   
   "@restart/hooks@^0.4.7":
     version "0.4.11"
@@ -2457,6 +2495,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@vkontakte/vk-bridge/-/vk-bridge-2.11.2.tgz#826eb2ad990327340d77bd5462f6444560b18533"
     integrity sha512-wFtgPsD7kdb+a6d67y6BLGEc5iI4jIlc+jV6YvyxxfEmF7WhoDNaGAQNj7B5Sx4ep1MqDyyh8wUOiHJ5HamXiA==
   
+  "@vkontakte/vk-mini-apps-router@^1.1.1":
+    version "1.1.1"
+    resolved "https://registry.yarnpkg.com/@vkontakte/vk-mini-apps-router/-/vk-mini-apps-router-1.1.1.tgz#1ec99562710c143514b8d2c28e2d6d7c2243f093"
+    integrity sha512-mTVRozPxaiC5cY789p2tLGU/lYboRWvK9iOYWgTz+tWutIKzNeaavYq1Eu0tTs61Zp+pjsMZ1AWmS+bTI03o1Q==
+    dependencies:
+      "@remix-run/router" "^1.7.1"
+  
   "@vkontakte/vk-miniapps-deploy@^0.0.25":
     version "0.0.25"
     resolved "https://registry.npmjs.org/@vkontakte/vk-miniapps-deploy/-/vk-miniapps-deploy-0.0.25.tgz"
@@ -2620,6 +2665,14 @@ Lockfile:
     dependencies:
       "@webassemblyjs/ast" "1.11.1"
       "@xtuc/long" "4.2.2"
+  
+  "@xstate/react@^1.2.0":
+    version "1.6.3"
+    resolved "https://registry.yarnpkg.com/@xstate/react/-/react-1.6.3.tgz#706f3beb7bc5879a78088985c8fd43b9dab7f725"
+    integrity sha512-NCUReRHPGvvCvj2yLZUTfR0qVp6+apc8G83oXSjN4rl89ZjyujiKrTff55bze/HrsvCsP/sUJASf2n0nzMF1KQ==
+    dependencies:
+      use-isomorphic-layout-effect "^1.0.0"
+      use-subscription "^1.3.0"
   
   "@xtuc/ieee754@^1.2.0":
     version "1.2.0"
@@ -3313,6 +3366,11 @@ Lockfile:
       raw-body "2.5.1"
       type-is "~1.6.18"
       unpipe "1.0.0"
+  
+  body-scroll-lock@^3.1.5:
+    version "3.1.5"
+    resolved "https://registry.yarnpkg.com/body-scroll-lock/-/body-scroll-lock-3.1.5.tgz#c1392d9217ed2c3e237fee1e910f6cdd80b7aaec"
+    integrity sha512-Yi1Xaml0EvNA0OYWxXiYNqY24AfWkbA6w5vxE7GWxtKfzIbZM+Qw+aSmkgsbWzbHiy/RCSkUZBplVxTA+E4jJg==
   
   bonjour-service@^1.0.11:
     version "1.0.14"
@@ -5306,6 +5364,13 @@ Lockfile:
     version "3.2.7"
     resolved "https://registry.npmjs.org/flatted/-/flatted-3.2.7.tgz"
     integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
+  
+  focus-trap@^6.2.2:
+    version "6.9.4"
+    resolved "https://registry.yarnpkg.com/focus-trap/-/focus-trap-6.9.4.tgz#436da1a1d935c48b97da63cd8f361c6f3aa16444"
+    integrity sha512-v2NTsZe2FF59Y+sDykKY+XjqZ0cPfhq/hikWVL88BqLivnNiEffAsac6rP6H45ff9wG9LL5ToiDqrLEP9GX9mw==
+    dependencies:
+      tabbable "^5.3.3"
   
   follow-redirects@^1.0.0:
     version "1.15.1"
@@ -8947,7 +9012,7 @@ Lockfile:
       kleur "^3.0.3"
       sisteransi "^1.0.5"
   
-  prop-types@^15.6.1, prop-types@^15.7.2, prop-types@^15.8.1:
+  prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.7.2, prop-types@^15.8.1:
     version "15.8.1"
     resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
     integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -9278,6 +9343,33 @@ Lockfile:
       workbox-webpack-plugin "^6.4.1"
     optionalDependencies:
       fsevents "^2.3.2"
+  
+  react-spring-bottom-sheet@^3.4.1:
+    version "3.4.1"
+    resolved "https://registry.yarnpkg.com/react-spring-bottom-sheet/-/react-spring-bottom-sheet-3.4.1.tgz#9a4f90b1c0af17eb4a22a606a5efc5d6e62c7b0c"
+    integrity sha512-yDFqiPMm/fjefjnOe6Q9zxccbCl6HMUKsK5bWgfGHJIj4zmXVKio5d4icQvmOLuwpuCA2pwv4J6nGWS6fUZidQ==
+    dependencies:
+      "@juggle/resize-observer" "^3.2.0"
+      "@reach/portal" "^0.13.0"
+      "@xstate/react" "^1.2.0"
+      body-scroll-lock "^3.1.5"
+      focus-trap "^6.2.2"
+      react-spring "^8.0.27"
+      react-use-gesture "^8.0.1"
+      xstate "^4.15.1"
+  
+  react-spring@^8.0.27:
+    version "8.0.27"
+    resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-8.0.27.tgz#97d4dee677f41e0b2adcb696f3839680a3aa356a"
+    integrity sha512-nDpWBe3ZVezukNRandTeLSPcwwTMjNVu1IDq9qA/AMiUqHuRN4BeSWvKr3eIxxg1vtiYiOLy4FqdfCP5IoP77g==
+    dependencies:
+      "@babel/runtime" "^7.3.1"
+      prop-types "^15.5.8"
+  
+  react-use-gesture@^8.0.1:
+    version "8.0.1"
+    resolved "https://registry.yarnpkg.com/react-use-gesture/-/react-use-gesture-8.0.1.tgz#4360c0f7c9e26baf9fbe58f63fc9de7ef699c17f"
+    integrity sha512-CXzUNkulUdgouaAlvAsC5ZVo0fi9KGSBSk81WrE4kOIcJccpANe9zZkAYr5YZZhqpicIFxitsrGVS4wmoMun9A==
   
   react@^17.0.2:
     version "17.0.2"
@@ -10443,6 +10535,11 @@ Lockfile:
     resolved "https://registry.npmjs.org/symbol-tree/-/symbol-tree-3.2.4.tgz"
     integrity sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==
   
+  tabbable@^5.3.3:
+    version "5.3.3"
+    resolved "https://registry.yarnpkg.com/tabbable/-/tabbable-5.3.3.tgz#aac0ff88c73b22d6c3c5a50b1586310006b47fbf"
+    integrity sha512-QD9qKY3StfbZqWOPLp0++pOrAVb/HbUi5xCc8cUo4XjP19808oaMiDzn0leBY5mCespIBM0CIZePzZjgzR83kA==
+  
   tailwindcss@^3.0.2:
     version "3.1.8"
     resolved "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.1.8.tgz"
@@ -10698,7 +10795,7 @@ Lockfile:
     resolved "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz"
     integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
   
-  tslib@^2.4.0:
+  tslib@^2.1.0, tslib@^2.4.0:
     version "2.6.2"
     resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
     integrity sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==
@@ -10933,6 +11030,23 @@ Lockfile:
     dependencies:
       querystringify "^2.1.1"
       requires-port "^1.0.0"
+  
+  use-isomorphic-layout-effect@^1.0.0:
+    version "1.1.2"
+    resolved "https://registry.yarnpkg.com/use-isomorphic-layout-effect/-/use-isomorphic-layout-effect-1.1.2.tgz#497cefb13d863d687b08477d9e5a164ad8c1a6fb"
+    integrity sha512-49L8yCO3iGT/ZF9QttjwLF/ZD9Iwto5LnH5LmEdk/6cFmXddqi2ulF0edxTwjj+7mqvpVVGQWvbXZdn32wRSHA==
+  
+  use-subscription@^1.3.0:
+    version "1.8.0"
+    resolved "https://registry.yarnpkg.com/use-subscription/-/use-subscription-1.8.0.tgz#f118938c29d263c2bce12fc5585d3fe694d4dbce"
+    integrity sha512-LISuG0/TmmoDoCRmV5XAqYkd3UCBNM0ML3gGBndze65WITcsExCD3DTvXXTLyNcOC0heFQZzluW88bN/oC1DQQ==
+    dependencies:
+      use-sync-external-store "^1.2.0"
+  
+  use-sync-external-store@^1.2.0:
+    version "1.2.0"
+    resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
+    integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
   
   use@^3.1.0:
     version "3.1.1"
@@ -11484,6 +11598,11 @@ Lockfile:
     version "2.2.0"
     resolved "https://registry.npmjs.org/xmlchars/-/xmlchars-2.2.0.tgz"
     integrity sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==
+  
+  xstate@^4.15.1:
+    version "4.38.3"
+    resolved "https://registry.yarnpkg.com/xstate/-/xstate-4.38.3.tgz#4e15e7ad3aa0ca1eea2010548a5379966d8f1075"
+    integrity sha512-SH7nAaaPQx57dx6qvfcIgqKRXIh4L0A1iYEqim4s1u7c9VoCgzZc+63FY90AKU4ZzOC2cfJzTnpO4zK7fCUzzw==
   
   xtend@^4.0.2:
     version "4.0.2"

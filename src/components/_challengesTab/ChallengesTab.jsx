@@ -10,32 +10,21 @@ import {
 } from '@vkontakte/vkui';
 
 import SpringModalSheet from '../_springSheet/SpringModalSheet';
+import MyChallenge from '../_myChallenge/MyChallenge';
+import CreateChallenge from '../_createChallenge/CreateChallenge';
+import Market from '../_market/Market';
 
 export default function ChallengesTab() {
+
   return (
     <SplitLayout>
       <SplitCol>
         <View activePanel="modals">
           <Panel id="modals">
             <Group>
-              <CellButton>
-                <div className="MyChallenge__img-box" />
-                <div className="MyChallenge__item-title">
-                  Мои челленджи
-                </div>
-              </CellButton>
-              <CellButton>
-                <div className="MyChallenge__img-box" />
-                <div className="MyChallenge__item-title">
-                  Создать челлендж
-                </div>
-              </CellButton>
-              <CellButton>
-                <div className="MyChallenge__img-box" />
-                <div className="MyChallenge__item-title">
-                  Магазин
-                </div>
-              </CellButton>
+              <MyChallenge />
+              <CreateChallenge />
+              <Market />
             </Group>
           </Panel>
         </View>
