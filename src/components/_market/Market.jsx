@@ -1,8 +1,10 @@
 import './Market.scss';
 
-import { useState } from 'react';
 import { CellButton } from '@vkontakte/vkui';
+import { useState } from 'react';
+
 import SpringModalSheet from '../_springSheet/SpringModalSheet';
+import ChallengesStore from '../_challengesStore/ChallengesStore';
 
 export default function Market() {
 
@@ -10,10 +12,10 @@ export default function Market() {
 
   return (
     <CellButton onClick={() => setOpen(true)}>
-      <div className="MyChallenge__img-box" />
+      <div className="market__img-box" />
       <div className="MyChallenge__item-title">Магазин</div>
       <SpringModalSheet openState={open} closedState={() => setOpen(false)}>
-        Магазин
+        <ChallengesStore />
       </SpringModalSheet>
     </CellButton>
   )

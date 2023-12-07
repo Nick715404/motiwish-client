@@ -1,6 +1,10 @@
 import './CreateTaskForm.scss';
 
 import { useForm } from 'react-hook-form';
+import { useState } from 'react';
+
+import SpringModalSheet from '../../components/_springSheet/SpringModalSheet';
+import VKCalendar from '../../components/_calendarVk/VKCalendar';
 
 export default function CreateTaskForm() {
 
@@ -11,8 +15,11 @@ export default function CreateTaskForm() {
     }
   });
 
+  const [open, setOpen] = useState(false);
+
   const handleClick = (event) => {
     event.preventDefault();
+    setOpen(true);
   };
 
   return (
@@ -48,12 +55,14 @@ export default function CreateTaskForm() {
         onClick={handleClick}
         className='submit-task-btn create-task__submit'
         type="submit"
-        value='Создать карточку' />
+        value='Создать задачу' />
       <input
         onClick={handleClick}
         className='delete-task-btn create-task__delete'
         type="reset"
         value='Удалить' />
+
+      <SpringModalSheet children={( <VKCalendar /> )} openState={open} closedState={() => setOpen(false)} />
     </form>
   )
 }

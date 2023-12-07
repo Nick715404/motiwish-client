@@ -2,6 +2,8 @@ import './DatePagination.scss';
 
 export default function DatePagination() {
   return (
-    <div>DatePagination</div>
+    <div style={{ color: '#000' }}>
+      Ноябрь 
+    </div>
   )
 }

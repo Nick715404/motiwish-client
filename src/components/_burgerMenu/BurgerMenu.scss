@@ -55,9 +55,8 @@
     li {
       border-top: 1px solid #D7D8D9;
 
-      // &:last-child {
-      //   border-bottom: 1px solid #D7D8D9;
-      // }
+      display: flex;
+      justify-content: flex-start;
     }
 
     a {
@@ -67,6 +66,8 @@
       font-family: SIFU, serif;
       font-weight: 400;
       color: #ED903A;
+      margin: 0;
+      text-align: unset;
     }
   }
 }

@@ -16,6 +16,14 @@ import Market from '../_market/Market';
 
 export default function ChallengesTab() {
 
+  const market = () => (
+    <></>
+  )
+
+  const myChallenges = () => (
+    <></>
+  )
+
   return (
     <SplitLayout>
       <SplitCol>
@@ -25,6 +33,7 @@ export default function ChallengesTab() {
               <MyChallenge />
               <CreateChallenge />
               <Market />
+              <SpringModalSheet />
             </Group>
           </Panel>
         </View>

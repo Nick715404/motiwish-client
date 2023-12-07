@@ -1,9 +1,10 @@
 .vkuiTabbar {
   background: #ED903A;
-  min-height: 110px;
+  min-height: 80px;
 
   .vkuiTabbarItem {
     height: 60px !important;
+    margin-top: 2%;
 
     .vkuiTabbarItem__text {
       color: #fff;

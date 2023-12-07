@@ -1,0 +1,28 @@
+.vkuiCellButton {
+  padding: 0;
+  background: #ED903A;
+  color: #fff;
+  min-height: 125px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  .vkuiSimpleCell__middle {
+    padding: 0;
+  }
+
+  .vkuiTypography {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .market__img-box {
+    height: 125px;
+    width: 125px;
+    background-image: url(../../assets/img/space-man.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

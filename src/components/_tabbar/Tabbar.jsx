@@ -40,15 +40,12 @@ export default function MyTabbar() {
         selected={activePanel === 'statisticsPanel'}
         onClick={() => handleItemClick('statistics')}
         text='Статистика'>
-        {/* <div className={`statisctic-icon ${getTabClass('statistics')}`}></div> */}
         <Icon28StatisticsOutline />
       </TabbarItem>
       <TabbarItem
         selected={activePanel === 'challengesPanel'}
         onClick={() => handleItemClick('challenges')}
         text='Челленджи'>
-        {/* <div className={`challenges-icon ${getTabClass('challenges')}`}></div>
-         */}
          <Icon36LiveOutline />
       </TabbarItem>
     </Tabbar>

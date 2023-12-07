@@ -53,15 +53,20 @@ ol {
 
 body,
 html {
-	min-height: 100vh
+	min-height: 100dvh
 }
 
 .body-main {
 	overflow: hidden;
+	position: fixed;	
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
 }
 
 #root {
-	min-height: 100vh;
+	min-height: 100dvh;
 	position: relative;
 	color: #fff;
 	background: #1F1B2C;
@@ -99,7 +104,7 @@ html {
 	font-family: SIFU;
 	color: $white;
 	background-color: $darkPurple;
-	min-height: 100vh;
+	min-height: 100dvh;
 
 	&::after {
 		content: '';
@@ -118,11 +123,12 @@ html {
 }
 
 .vkuiAppRoot {
-	height: 100vh !important;
+	height: 100dvh !important;
 }
 
 .vkuiInternalPanel__in {
 	padding: 0 !important;
+	z-index: 99999;
 }
 
 .vkuiPanelHeader__in {
@@ -181,4 +187,12 @@ html {
 	background-color: transparent;
 	border: 1px solid transparent;
 	color: #ED903A;
+}
+
+reach-portal {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100dvh;
+	left: 0;
 }
