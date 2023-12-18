@@ -1,4 +1,7 @@
 .create-task {
+  position: relative;
+  z-index: 99999;
+
   &__form {
     display: flex;
     flex-direction: column;

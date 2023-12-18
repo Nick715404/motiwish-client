@@ -15,7 +15,6 @@ export default function Statistics() {
           <Header />
           <div className="container">
             <StatisticsTabs />
-            <DatePagination />
           </div>
         </div>
         <SpringModalSheet />

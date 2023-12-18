@@ -10,12 +10,12 @@ export default function Task({ task, children }) {
 
   return (
     <>
-      <div key={task.id} className="task" onClick={() => { setOpen(true) }} >
+      <div key={task.id} className="task" >
         {children}
       </div>
-      <SpringModalSheet openState={open} closedState={() => { setOpen(false) }}>
+      {/* <SpringModalSheet openState={open} closedState={() => { setOpen(false) }}>
         Изменить задачу
-      </SpringModalSheet>
+      </SpringModalSheet> */}
     </>
   )
 }

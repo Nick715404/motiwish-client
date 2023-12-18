@@ -30,12 +30,12 @@ export default function MyTabbar() {
         text='Домой'>
         <Icon36HomeOutline />
       </TabbarItem>
-      <TabbarItem
+      {/* <TabbarItem
         selected={activePanel === 'calendarPanel'}
         onClick={() => handleItemClick('calendar')}
         text='Календарь'>
         <Icon36CalendarOutline />
-      </TabbarItem>
+      </TabbarItem> */}
       <TabbarItem
         selected={activePanel === 'statisticsPanel'}
         onClick={() => handleItemClick('statistics')}

@@ -3,56 +3,56 @@
     "id": "1",
     "name": "Купол",
     "price": "15 руб",
-    "coins": "30 монет",
-    "img": ""
+    "coins": 30,
+    "img": "./store-img/cupol.png"
   },
   {
     "id": "2",
-    "name": "Купол",
-    "price": "15 руб",
-    "coins": "30 монет",
-    "img": ""
+    "name": "Марсианин",
+    "price": "10 руб",
+    "coins": 20,
+    "img": "./store-img/marsianin.png"
   },
   {
     "id": "3",
-    "name": "Купол",
-    "price": "15 руб",
-    "coins": "30 монет",
-    "img": ""
+    "name": "Астранавт",
+    "price": "25 руб",
+    "coins": 45,
+    "img": "./store-img/astranaut.png"
   },
   {
     "id": "4",
-    "name": "Купол",
-    "price": "15 руб",
-    "coins": "30 монет",
-    "img": ""
+    "name": "Марсоход",
+    "price": "5 руб",
+    "coins": 10,
+    "img": "./store-img/marsohod.png"
   },
   {
     "id": "5",
-    "name": "Купол",
-    "price": "15 руб",
-    "coins": "30 монет",
-    "img": ""
+    "name": "Шейзлонг",
+    "price": "100 руб",
+    "coins": 20,
+    "img": "./store-img/sheyzlong.png"
   },
   {
     "id": "6",
-    "name": "Купол",
-    "price": "15 руб",
-    "coins": "30 монет",
-    "img": ""
+    "name": "Собака",
+    "price": "1500 руб",
+    "coins": 80,
+    "img": "./store-img/sobaka.png"
   },
   {
     "id": "7",
-    "name": "Купол",
-    "price": "15 руб",
-    "coins": "30 монет",
-    "img": ""
+    "name": "Батарея",
+    "price": "50 руб",
+    "coins": 10,
+    "img": "./store-img/batareya.png"
   },
   {
     "id": "8",
-    "name": "Купол",
-    "price": "15 руб",
-    "coins": "30 монет",
-    "img": ""
+    "name": "Теплица",
+    "price": "2 руб",
+    "coins": 14,
+    "img": "./store-img/teplitsa.png"
   }
 ]

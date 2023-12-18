@@ -26,3 +26,33 @@
     background-repeat: no-repeat;
   }
 }
+
+.animation-box-right {
+  opacity: 0 !important;
+  
+  &--first {
+    animation: fadeIn 1.4s ease-in-out forwards;
+  }
+
+  &--second {
+    animation: fadeIn 1.4s ease-in-out forwards;
+  }
+}
+
+.animation-box-left {
+  opacity: 0 !important;
+
+  &--first {
+    animation: fadeIn 1.4s ease-in-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

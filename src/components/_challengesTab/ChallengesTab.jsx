@@ -30,10 +30,18 @@ export default function ChallengesTab() {
         <View activePanel="modals">
           <Panel id="modals">
             <Group>
-              <MyChallenge />
-              <CreateChallenge />
-              <Market />
-              <SpringModalSheet />
+              <div style={{ marginTop: '5%' }}>
+                <div className="animation-box-left--first">
+                  <CreateChallenge />
+                </div>
+                <div className="animation-box-right--first">
+                  <MyChallenge />
+                </div>
+                <div className="animation-box-right--second">
+                  <Market />
+                </div>
+                <SpringModalSheet />
+              </div>
             </Group>
           </Panel>
         </View>

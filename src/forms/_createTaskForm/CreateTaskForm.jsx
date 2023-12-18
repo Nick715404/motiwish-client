@@ -1,68 +1,66 @@
+// import { useForm } from 'react-hook-form';
+// import SpringModalSheet from '../../components/_springSheet/SpringModalSheet';
+// import VKCalendar from '../../components/_calendarVk/VKCalendar';
+
 import './CreateTaskForm.scss';
+import { useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
-import { useForm } from 'react-hook-form';
-import { useState } from 'react';
-
-import SpringModalSheet from '../../components/_springSheet/SpringModalSheet';
-import VKCalendar from '../../components/_calendarVk/VKCalendar';
-
-export default function CreateTaskForm() {
-
-  const { register, handleSubmit, formState: { errors } } = useForm({
-    defaultValues: {
-      name: '',
-      description: '',
-    }
-  });
+export default function CreateTaskForm({ addTask, deleteTask, tasks }) {
 
   const [open, setOpen] = useState(false);
+  const [taskTitle, setTaskTitle] = useState('');
+  const [taskDescr, setTaskDescr] = useState('');
 
-  const handleClick = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    setOpen(true);
+
+    const newTask = {
+      id: uuidv4(),
+      title: taskTitle,
+      description: taskDescr,
+    };
+
+    addTask(newTask);
+
+    // Очистка полей после добавления задачи
+    setTaskTitle('');
+    setTaskDescr('');
   };
 
   return (
-    <form className='create-task__form'
-      onSubmit={handleSubmit((data) => {
-        setCount(count + 1);
-        console.log(data);
-      })} >
+    <form className='create-task__form' onSubmit={handleSubmit}>
       <label>
         <input
           className='create-task__input'
           type="text"
           name='taskTitle'
           id='taskTitle'
-          placeholder='Пример: Сделать крутое приложение' {...register('taskTitle', {
-            required: 'Это поле обязательно для заполнения'
-          })} />
-        <p>{errors.name?.message}</p>
+          value={taskTitle}
+          onChange={(e) => setTaskTitle(e.target.value)}
+          placeholder='Пример: Сделать крутое приложение' />
       </label>
       <label>
         <input className='create-task__input'
           type="text"
           name="taskDescr"
           id='taskDescr'
+          value={taskDescr}
+          onChange={(e) => setTaskDescr(e.target.value)}
           placeholder='Описание' />
       </label>
       <label>
-        <button
-          onClick={handleClick}
-          className='create-task__calendar-btn'>Сегодня</button>
+        <button className='create-task__calendar-btn'>Сегодня</button>
       </label>
       <input
-        onClick={handleClick}
         className='submit-task-btn create-task__submit'
         type="submit"
         value='Создать задачу' />
       <input
-        onClick={handleClick}
         className='delete-task-btn create-task__delete'
         type="reset"
-        value='Удалить' />
-
-      <SpringModalSheet children={( <VKCalendar /> )} openState={open} closedState={() => setOpen(false)} />
+        onClick={() => setOpen(false)}
+        value='Отменить' />
     </form>
-  )
+  );
 }

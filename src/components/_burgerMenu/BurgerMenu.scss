@@ -57,11 +57,19 @@
 
       display: flex;
       justify-content: flex-start;
+
+      padding: 20px 0;
+      font-size: 16px;
+      font-family: SIFU, serif;
+      font-weight: 400;
+      color: #ED903A;
+      margin: 0;
+      text-align: unset;
     }
 
     a {
       display: block;
-      padding: 5.5% 0;
+      // padding: 5.5% 0;
       font-size: 16px;
       font-family: SIFU, serif;
       font-weight: 400;

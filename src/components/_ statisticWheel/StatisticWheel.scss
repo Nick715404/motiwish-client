@@ -1,0 +1,81 @@
+.statistic-wheel {
+
+  width: 350px;
+  height: 350px;
+  margin-top: 10%;
+  transition: height .4s ease-in-out;
+
+  @media (max-width: 390px) {
+    height: 340px;
+  }
+
+  @media (max-width: 365px) {
+    height: 310px;
+  }
+
+  @media (max-width: 340px) {
+    height: 300px;
+  }
+
+  &__border {
+    border: 36px solid #ED903A;
+    height: 100%;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__tasks-count {
+    position: relative;
+    font-size: 72px;
+    margin-bottom: 10px;
+    font-weight: 400;
+
+  }
+
+  &-done-tasks__text {
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+  }
+
+  span {
+    color: #ED903A;
+  }
+}
+
+.animation-fadeFromLeft {
+  left: -80px;
+  opacity: 0;
+  animation: fadeFromLeft .7s ease-in-out forwards;
+}
+
+.animation-fadeFromRight {
+  right: -80px;
+  opacity: 0;
+  animation: fadeFromRight .7s ease-in-out forwards;
+}
+
+@keyframes fadeFromLeft {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes fadeFromRight {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}

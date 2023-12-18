@@ -19,6 +19,12 @@
     }
   }
 
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .active {
     color: #fff;
     background-color: #ED903A;

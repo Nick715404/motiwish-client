@@ -6,6 +6,7 @@ import { useActiveVkuiLocation, useGetPanelForView } from '@vkontakte/vk-mini-ap
 
 import MyTabbar from './components/_tabbar/Tabbar';
 
+import { useEffect } from 'react';
 
 import Home from './panels/_home/Home';
 import Calendar from './panels/_calendar/CalendarPage';
@@ -15,6 +16,11 @@ import Challenges from './panels/_challenges/Challenges';
 const App = () => {
 	const { view: activeView } = useActiveVkuiLocation();
 	const activePanel = useGetPanelForView('homePanel');
+
+	// useEffect(() => {
+	// 	// Очистить весь localStorage
+	// 	localStorage.clear();
+	// },[]);
 
 	return (
 		<Epic

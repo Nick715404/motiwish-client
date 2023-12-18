@@ -3,6 +3,9 @@ import ReactDOM from "react-dom";
 import bridge from "@vkontakte/vk-bridge";
 import App from "./App";
 
+import { TasksProvider } from "./customHooks/useTasks";
+import { CoinProvider } from "./customHooks/useCoins";
+
 import { RouterProvider, createHashRouter } from "@vkontakte/vk-mini-apps-router";
 import { AdaptivityProvider, ConfigProvider, AppRoot } from "@vkontakte/vkui";
 
@@ -38,7 +41,11 @@ ReactDOM.render(
       <AppRoot mode="embedded">
         <RouterProvider router={router}>
           <StrictMode>
-            <App />
+            <TasksProvider>
+              <CoinProvider>
+                <App />
+              </CoinProvider>
+            </TasksProvider>
           </StrictMode>
         </RouterProvider>
       </AppRoot>

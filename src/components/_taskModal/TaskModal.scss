@@ -1,19 +1,21 @@
 .home-task {
+  overflow: hidden;
 
   &__modal {
     position: absolute;
-    bottom: 0;
+    bottom: -50%;
     width: 100%;
     background: #fff;
     color: #ED903A;
-    height: 236px;
+    height: 266px;
     border-radius: 14px 14px 0 0;
     padding: 20px;
     font-size: 14px;
+    animation: fadeFromBottom .5s ease-in-out forwards;
   }
 
   &__tasks {
-    padding-top: 20px;
+    padding-top: 15px;
 
     .task {
       margin-bottom: 8px;
@@ -22,5 +24,24 @@
       gap: 10px;
       width: fit-content;
     }
+  }
+}
+
+.home-task-modal {
+  z-index: 9;
+  position: relative;
+
+  .task__title {
+    color: #ED903A;
+  }
+}
+
+@keyframes fadeFromBottom {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0%;
   }
 }

@@ -2,7 +2,9 @@ import './CreateChallenge.scss';
 
 import { CellButton } from '@vkontakte/vkui';
 import { useState } from 'react';
+
 import SpringModalSheet from '../_springSheet/SpringModalSheet';
+import CreateChallengeForm from '../../forms/_createChallengeForm/CreateChallengeForm';
 
 export default function CreateChallenge() {
 
@@ -13,7 +15,9 @@ export default function CreateChallenge() {
       <div className="MyChallenge__img-box" />
       <div className="MyChallenge__item-title">Создать челлендж</div>
       <SpringModalSheet openState={open} closedState={() => setOpen(false)}>
-        Создать челлендж
+        <CreateChallengeForm>
+          
+        </CreateChallengeForm>
       </SpringModalSheet>
     </CellButton>
   )

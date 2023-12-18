@@ -1,6 +1,6 @@
 .addTaskBtn {
   color: #ED903A;
-  font-size: 14px;
+  font-size: clamp(14px, 4vw, 18px);
   border: none;
   background: none;
   padding-left: 34px;
